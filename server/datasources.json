@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ms": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "ecommerce",
+    "name": "ms",
+    "user": "pyner",
+    "connector": "mysql"
+  }
+}

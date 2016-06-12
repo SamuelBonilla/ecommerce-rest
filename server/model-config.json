@@ -1,0 +1,79 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "ms"
+  },
+  "AccessToken": {
+    "dataSource": "ms",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "ms",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "ms",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "ms",
+    "public": false
+  },
+  "Categoria": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "Ciudad": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "Pais": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "OrdenComprador": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "Producto": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "Rol": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "SubCategoria": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "Ubicacion": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "Usuario": {
+    "dataSource": "ms",
+    "public": true
+  },
+  "UsuarioHasRole": {
+    "dataSource": "ms",
+    "public": false
+  },
+  "Valoracion": {
+    "dataSource": "ms",
+    "public": true
+  }
+}
