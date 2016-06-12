@@ -58,7 +58,7 @@
       },
       "_selectable": true
     },
-    "idCategoria": {
+    "id_categoria": {
       "type": "Number",
       "required": true,
       "length": null,

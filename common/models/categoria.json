@@ -60,7 +60,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "subCategoria": {
+      "type": "hasMany",
+      "model": "SubCategoria",
+      "foreignKey": "id_categoria"
+    }
+  },
   "acls": [],
   "methods": {}
 }
