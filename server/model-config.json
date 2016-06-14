@@ -14,15 +14,16 @@
     ]
   },
   "User": {
-    "dataSource": "ms"
+    "dataSource": "ms",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "ms",
-    "public": true
+    "public": false
   },
   "ACL": {
     "dataSource": "ms",
-    "public": true
+    "public": false
   },
   "RoleMapping": {
     "dataSource": "ms",
@@ -54,7 +55,7 @@
   },
   "Rol": {
     "dataSource": "ms",
-    "public": true
+    "public": false
   },
   "SubCategoria": {
     "dataSource": "ms",
@@ -70,7 +71,7 @@
   },
   "UsuarioHasRole": {
     "dataSource": "ms",
-    "public": false
+    "public": true
   },
   "Valoracion": {
     "dataSource": "ms",

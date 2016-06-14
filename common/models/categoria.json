@@ -75,15 +75,15 @@
       "permission": "DENY"
     },
     {
-      "accessType": "WRITE",
+      "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     },
     {
-      "accessType": "READ",
+      "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "admin",
       "permission": "ALLOW"
     }
   ],
