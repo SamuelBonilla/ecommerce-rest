@@ -18,19 +18,19 @@
   },
   "AccessToken": {
     "dataSource": "ms",
-    "public": false
+    "public": true
   },
   "ACL": {
     "dataSource": "ms",
-    "public": false
+    "public": true
   },
   "RoleMapping": {
     "dataSource": "ms",
-    "public": false
+    "public": true
   },
   "Role": {
     "dataSource": "ms",
-    "public": false
+    "public": true
   },
   "Categoria": {
     "dataSource": "ms",

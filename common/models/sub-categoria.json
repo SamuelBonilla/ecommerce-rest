@@ -76,7 +76,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "categorias": {
+      "type": "belongsTo",
+      "model": "Categoria",
+      "foreignKey": "id_categoria"
+    }
+  },
   "acls": [],
   "methods": {}
 }
