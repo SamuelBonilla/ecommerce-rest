@@ -44,7 +44,23 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "productos": {
+      "type": "hasMany",
+      "model": "Producto",
+      "foreignKey": "id_usuario"
+    },
+    "ordenCompradors": {
+      "type": "hasMany",
+      "model": "OrdenComprador",
+      "foreignKey": "id_usuario"
+    },
+    "valoracions": {
+      "type": "hasMany",
+      "model": "Valoracion",
+      "foreignKey": "id_usuario"
+    }
+  },
   "acls": [
     {
       "accessType": "READ",

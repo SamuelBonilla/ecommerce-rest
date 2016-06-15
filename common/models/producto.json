@@ -90,7 +90,7 @@
       },
       "_selectable": false
     },
-    "idUsuario": {
+    "id_usuario": {
       "type": "Number",
       "required": true,
       "length": null,
@@ -106,7 +106,7 @@
       },
       "_selectable": false
     },
-    "idSubCategiria": {
+    "id_sub_categiria": {
       "type": "Number",
       "required": true,
       "length": null,
@@ -140,7 +140,6 @@
     },
     "fecha": {
       "type": "Date",
-      "required": true,
       "length": null,
       "precision": null,
       "scale": null,
@@ -172,7 +171,43 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "subCategoria": {
+      "type": "belongsTo",
+      "model": "SubCategoria",
+      "foreignKey": "id_sub_categiria"
+    },
+    "usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "id_usuario"
+    },
+    "ordenCompradors": {
+      "type": "hasMany",
+      "model": "OrdenComprador",
+      "foreignKey": "id_producto",
+      "through": "Usuario"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

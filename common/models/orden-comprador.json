@@ -26,14 +26,14 @@
       },
       "_selectable": false
     },
-    "idProductoO": {
+    "id_producto": {
       "type": "Number",
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "id_producto_o",
+        "columnName": "id_producto",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -42,14 +42,14 @@
       },
       "_selectable": false
     },
-    "idUsuarioO": {
+    "id_usuario": {
       "type": "Number",
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "id_usuario_o",
+        "columnName": "id_usuario",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -60,7 +60,6 @@
     },
     "fecha": {
       "type": "Date",
-      "required": true,
       "length": null,
       "precision": null,
       "scale": null,
@@ -92,7 +91,30 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "producto": {
+      "type": "belongsTo",
+      "model": "Producto",
+      "foreignKey": "id_producto"
+    },
+    "usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "id_usuario"
+    },
+    "valoraciones": {
+      "type": "hasMany",
+      "model": "Valoracion",
+      "foreignKey": "id_orden_comprador"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

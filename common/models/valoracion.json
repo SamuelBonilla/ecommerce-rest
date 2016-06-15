@@ -26,7 +26,7 @@
       },
       "_selectable": false
     },
-    "idOrdernComprador": {
+    "id_ordern_comprador": {
       "type": "Number",
       "required": true,
       "length": null,
@@ -42,14 +42,14 @@
       },
       "_selectable": false
     },
-    "idUsuarioV": {
+    "id_usuario": {
       "type": "Number",
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "id_usuario_v",
+        "columnName": "id_usuario",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -92,7 +92,6 @@
     },
     "fecha": {
       "type": "Date",
-      "required": true,
       "length": null,
       "precision": null,
       "scale": null,
@@ -108,7 +107,25 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "id_usuario"
+    },
+    "ordenComprador": {
+      "type": "belongsTo",
+      "model": "OrdenComprador",
+      "foreignKey": "id_orden_comprador"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }

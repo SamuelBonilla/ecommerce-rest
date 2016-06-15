@@ -27,11 +27,11 @@
   },
   "RoleMapping": {
     "dataSource": "ms",
-    "public": true
+    "public": false
   },
   "Role": {
     "dataSource": "ms",
-    "public": true
+    "public": false
   },
   "Categoria": {
     "dataSource": "ms",
